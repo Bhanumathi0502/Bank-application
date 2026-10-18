@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBank - Banking Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+        <h2 class="logo">🏦 MyBank</h2>
+        <p class="menu-title">MAIN MENU</p>
+
+        <button class="nav-btn active" data-page="home">🏠 Home</button>
+        <button class="nav-btn" data-page="create">➕ Create Account</button>
+        <button class="nav-btn" data-page="deposit">💰 Deposit</button>
+        <button class="nav-btn" data-page="withdraw">💸 Withdraw</button>
+        <button class="nav-btn" data-page="accounts">📋 All Accounts</button>
+        <button class="nav-btn" data-page="transactions">🧾 Transactions</button>
+
+        <div class="sidebar-footer">
+            <p>Banking Management</p>
+            <small>Student Project</small>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h2 id="pageTitle">Dashboard</h2>
+                <p>Welcome to MyBank</p>
+            </div>
+            <div class="profile">👤 Admin</div>
+        </header>
+
+        <section id="home" class="page active">
+            <div class="welcome">
+                <h1>Welcome to MyBank 👋</h1>
+                <p>Manage your bank accounts easily in one place.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <span>Total Accounts</span>
+                    <h2 id="totalAccounts">0</h2>
+                    <p>Registered accounts</p>
+                </div>
+                <div class="stat-card">
+                    <span>Total Balance</span>
+                    <h2 id="totalBalance">₹0.00</h2>
+                    <p>Combined account balance</p>
+                </div>
+                <div class="stat-card">
+                    <span>Total Transactions</span>
+                    <h2 id="totalTransactions">0</h2>
+                    <p>Deposit and withdrawal records</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Quick Actions</h2>
+                <div class="quick-actions">
+                    <button class="action-btn blue" data-page="create">
+                        ➕ Create Account
+                    </button>
+                    <button class="action-btn green" data-page="deposit">
+                        💰 Deposit Money
+                    </button>
+                    <button class="action-btn orange" data-page="withdraw">
+                        💸 Withdraw Money
+                    </button>
+                    <button class="action-btn purple" data-page="accounts">
+                        📋 View All Accounts
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Recent Transactions</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Account</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentTransactions"></tbody>
+                    </table>
+                </div>
+                <p id="recentEmpty" class="empty">No transactions available.</p>
+            </div>
+        </section>
+
+        <section id="create" class="page">
+            <div class="card form-card">
+                <h2>Create New Account</h2>
+                <p class="muted">Enter the account holder details below.</p>
+
+                <form id="createForm">
+                    <label for="customerName">Account Holder Name</label>
+                    <input id="customerName" type="text"
+                           placeholder="Enter full name" required>
+
+                    <label for="newAccountNumber">Account Number</label>
+                    <input id="newAccountNumber" type="text"
+                           inputmode="numeric" pattern="[0-9]+"
+                           placeholder="Enter account number" required>
+
+                    <label for="initialBalance">Initial Deposit (₹)</label>
+                    <input id="initialBalance" type="number"
+                           min="0" step="0.01" value="0" required>
+
+                    <button type="submit" class="primary-btn">
+                        Create Account
+                    </button>
+                    <p id="createMessage" class="message"></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="deposit" class="page">
+            <div class="card form-card">
+                <h2>Deposit Money 💰</h2>
+                <p class="muted">Add money to an existing account.</p>
+
+                <form id="depositForm">
+                    <label for="depositAccount">Select Account</label>
+                    <select id="depositAccount" required></select>
+
+                    <label for="depositAmount">Deposit Amount (₹)</label>
+                    <input id="depositAmount" type="number"
+                           min="0.01" step="0.01"
+                           placeholder="Enter amount" required>
+
+                    <button type="submit" class="primary-btn green">
+                        Deposit Money
+                    </button>
+                    <p id="depositMessage" class="message"></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="withdraw" class="page">
+            <div class="card form-card">
+                <h2>Withdraw Money 💸</h2>
+                <p class="muted">Withdraw money from an existing account.</p>
+
+                <form id="withdrawForm">
+                    <label for="withdrawAccount">Select Account</label>
+                    <select id="withdrawAccount" required></select>
+
+                    <label for="withdrawAmount">Withdrawal Amount (₹)</label>
+                    <input id="withdrawAmount" type="number"
+                           min="0.01" step="0.01"
+                           placeholder="Enter amount" required>
+
+                    <button type="submit" class="primary-btn orange">
+                        Withdraw Money
+                    </button>
+                    <p id="withdrawMessage" class="message"></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="accounts" class="page">
+            <div class="card">
+                <div class="section-heading">
+                    <div>
+                        <h2>All Bank Accounts</h2>
+                        <p class="muted">View all registered account details.</p>
+                    </div>
+                    <button class="primary-btn" data-page="create">
+                        + Add Account
+                    </button>
+                </div>
+
+                <input id="accountSearch" class="search"
+                       type="search"
+                       placeholder="Search by name or account number">
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Account Number</th>
+                                <th>Balance</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="accountsTable"></tbody>
+                    </table>
+                </div>
+                <p id="accountsEmpty" class="empty">No accounts created yet.</p>
+            </div>
+        </section>
+
+        <section id="transactions" class="page">
+            <div class="card">
+                <h2>Transaction History</h2>
+                <p class="muted">All recorded deposits and withdrawals.</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Account Holder</th>
+                                <th>Account Number</th>
+                                <th>Transaction Type</th>
+                                <th>Amount</th>
+                                <th>Date & Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionsTable"></tbody>
+                    </table>
+                </div>
+                <p id="transactionsEmpty" class="empty">
+                    No transactions available.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 MyBank | Banking Application Project</p>
+        </footer>
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

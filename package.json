@@ -1,0 +1,20 @@
+{
+  "name": "banking-application",
+  "version": "1.0.0",
+  "description": "A simple banking application using Node.js and Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "banking",
+    "nodejs",
+    "express",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
