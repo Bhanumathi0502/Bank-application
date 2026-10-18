@@ -64,37 +64,37 @@ The following screenshots demonstrate the main features of the MyBank applicatio
 
 Displays the dashboard, account summary, and quick action buttons.
 
-![MyBank Home Page](screenshots/home.png)
+![MyBank Home Page](screenshots(348).png)
 
 ### Create Account
 
 Allows users to create a new bank account by entering account details.
 
-![MyBank Create Account](screenshots/create-account.png)
+![MyBank Create Account](screenshots(349).png)
 
 ### Deposit Money
 
 Allows users to deposit money into an existing account.
 
-![MyBank Deposit](screenshots/deposit.png)
+![MyBank Deposit](screenshots(350).png)
 
 ### Withdraw Money
 
 Allows users to withdraw money when sufficient balance is available.
 
-![MyBank Withdraw](screenshots/withdraw.png)
+![MyBank Withdraw](screenshots(351).png)
 
 ### All Accounts
 
 Displays account details and provides account search and management options.
 
-![MyBank All Accounts](screenshots/accounts.png)
+![MyBank All Accounts](screenshots(352).png)
 
 ### Transaction History
 
 Displays recorded deposit and withdrawal transactions.
 
-![MyBank Transactions](screenshots/transactions.png)
+![MyBank Transactions](screenshots(353).png)
 
 **Screenshot instructions:** Create a folder named `screenshots` in the main project directory. Add your actual screenshots using the filenames listed above and upload them to GitHub. The images will appear here only when the files exist at these paths.
 
