@@ -33,15 +33,15 @@ Before running the application, make sure you have:
 Clone the project from GitHub using the following command:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Bhanumathi0502/Bank-application.git
 ```
 
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository URL.
+Replace `https://github.com/Bhanumathi0502/Bank-application` with your actual GitHub repository URL.
 
 ### Step 2: Open the Project Folder
 
 ```bash
-cd Banking-Application
+cd Bank-Application
 ```
 
 ### Step 3: Open in Visual Studio Code
