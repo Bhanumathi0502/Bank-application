@@ -6,15 +6,15 @@
 
 ## 2. Description / Motivation
 
-MyBank is a web-based banking management application developed to demonstrate basic banking operations through a simple and user-friendly interface.
+MyBank is a web-based banking application developed to demonstrate basic banking operations through a simple and user-friendly interface.
 
-The main purpose of this project is to make basic account management easier and to demonstrate how a banking application can be developed using web technologies.
+The main purpose of this project is to demonstrate account management and basic banking operations using web development technologies.
 
-This project is designed for students and users who want to understand basic banking operations and frontend web development.
+This project was developed as part of **Coding Assignment 7 – Review Your README** to practice HTML, CSS, JavaScript, data handling, and user interface design.
 
 The application allows users to create bank accounts, deposit money, withdraw money, view account details, search for accounts, and view transaction history.
 
-This project was developed as part of a coding assignment to practice application development, JavaScript functionality, data handling, and responsive user interface design.
+**Note:** This is an educational demonstration project and is not intended for real banking transactions.
 
 ## 3. Installation Guidelines
 
@@ -23,10 +23,9 @@ This project was developed as part of a coding assignment to practice applicatio
 Before running the application, make sure you have:
 
 - Visual Studio Code
-- Node.js (only if required by your project setup)
-- A modern web browser
+- A modern web browser, such as Google Chrome
 - Live Server extension for Visual Studio Code
-- Git (for cloning the repository)
+- Git (optional, for cloning the repository)
 
 ### Step 1: Clone the Repository
 
@@ -36,78 +35,75 @@ Clone the project from GitHub using the following command:
 git clone https://github.com/Bhanumathi0502/Bank-application.git
 ```
 
-Replace `https://github.com/Bhanumathi0502/Bank-application` with your actual GitHub repository URL.
-
 ### Step 2: Open the Project Folder
 
 ```bash
-cd Bank-Application
+cd Bank-application
 ```
 
 ### Step 3: Open in Visual Studio Code
 
-Open the project folder in Visual Studio Code.
+Open Visual Studio Code and open the downloaded `Bank-application` project folder.
 
 ### Step 4: Run the Application
 
-Open the `public` folder and locate `index.html`.
-
-Right-click the file and select **Open with Live Server**.
+1. Open the `public` folder.
+2. Locate `index.html`.
+3. Right-click `index.html`.
+4. Select **Open with Live Server**.
 
 The application will open in your default web browser.
 
-**Note:** The current frontend demonstration does not require a backend server or database. If your existing project uses a backend API, follow the backend installation instructions for that project instead.
+**Note:** The current frontend demonstration can run without a backend server or database. If the project implementation includes a backend, follow the corresponding backend setup instructions.
 
 ## 4. Screenshots
 
-Screenshots of the application demonstrate its user interface and main features.
+The following screenshots demonstrate the main features of the MyBank application.
 
 ### Home Page
 
-The home page displays the dashboard, account summary, total balance, transaction count, and quick action buttons.
+Displays the dashboard, account summary, and quick action buttons.
 
 ![MyBank Home Page](screenshots/home.png)
 
 ### Create Account
 
-Users can create a new bank account by entering the account holder's name, account number, and initial balance.
+Allows users to create a new bank account by entering account details.
 
 ![MyBank Create Account](screenshots/create-account.png)
 
 ### Deposit Money
 
-Users can select an account and deposit money into it.
+Allows users to deposit money into an existing account.
 
 ![MyBank Deposit](screenshots/deposit.png)
 
 ### Withdraw Money
 
-Users can withdraw money from an account, subject to the available balance.
+Allows users to withdraw money when sufficient balance is available.
 
 ![MyBank Withdraw](screenshots/withdraw.png)
 
 ### All Accounts
 
-Users can view all registered accounts, search by name or account number, and delete an account record.
+Displays account details and provides account search and management options.
 
 ![MyBank All Accounts](screenshots/accounts.png)
 
 ### Transaction History
 
-Users can view recorded deposits and withdrawals, including the account details, transaction type, amount, and date.
+Displays recorded deposit and withdrawal transactions.
 
 ![MyBank Transactions](screenshots/transactions.png)
 
-**Screenshot instructions:** Create a folder named `screenshots` in the main project directory. Save the corresponding screenshots using the filenames shown above. The images must be uploaded to GitHub for them to appear in the README.
+**Screenshot instructions:** Create a folder named `screenshots` in the main project directory. Add your actual screenshots using the filenames listed above and upload them to GitHub. The images will appear here only when the files exist at these paths.
 
 ## 5. Technologies Used
-
-The project uses the following technologies:
 
 - **HTML5:** Creates the structure of the application.
 - **CSS3:** Provides styling, layout, and responsive design.
 - **JavaScript:** Implements account management and banking operations.
-- **Browser Local Storage:** Stores demonstration data in the browser, if used by the current implementation.
+- **Browser Local Storage:** Stores demonstration data locally in the browser, if used by the implementation.
 - **Git:** Tracks source code changes.
 - **GitHub:** Hosts the project repository.
 - **Visual Studio Code:** Used for development and testing.
@@ -117,16 +113,18 @@ The project uses the following technologies:
 The main features of MyBank include:
 
 1. **Home Dashboard:** Displays account summaries and quick actions.
-2. **Create Account:** Creates a new bank account record.
+2. **Create Account:** Creates a new account record.
 3. **Deposit Money:** Adds money to an existing account.
-4. **Withdraw Money:** Deducts money from an account when sufficient funds are available.
-5. **All Accounts:** Displays account details, including name, account number, and balance.
+4. **Withdraw Money:** Deducts money when sufficient funds are available.
+5. **All Accounts:** Displays account names, account numbers, and balances.
 6. **Search Accounts:** Searches for accounts by name or account number.
 7. **Delete Account:** Removes an account record.
 8. **Transaction History:** Displays recorded deposits and withdrawals.
-9. **Form Validation:** Checks user input and prevents duplicate account numbers.
-10. **Responsive Design:** Adapts the interface to different screen sizes.
-11. **Data Persistence:** Retains demonstration records in browser Local Storage when that storage mechanism is used.
+9. **Form Validation:** Validates user input and prevents duplicate account numbers, if implemented.
+10. **Responsive Interface:** Provides a user-friendly layout across supported screen sizes.
+11. **Data Persistence:** Retains demonstration data using browser Local Storage, if implemented.
+
+*List only the features that are actually working in your project.*
 
 ## 7. Future Enhancements
 
@@ -139,27 +137,29 @@ The following improvements can be considered for future versions:
 - Money transfers between accounts.
 - Improved transaction history and filtering.
 - Account statements and downloadable reports.
-- Automated unit and integration testing.
+- Automated testing.
 - Stronger server-side validation and security controls.
 
 ## 8. License
 
-This project is intended for educational purposes.
+This project is created for educational purposes as part of an academic coding assignment.
 
-The project owner can choose an appropriate open-source license, such as the MIT License, before publishing the project.
-
-If the project is released under the MIT License, include the standard MIT License text in a file named `LICENSE` in the root directory.
+No specific open-source license is declared for this project. If an open-source license is selected in the future, the appropriate license text should be added to a `LICENSE` file in the root directory.
 
 ## 9. Important Note
 
-MyBank is a student demonstration project and is not intended for real banking transactions.
+MyBank is a student demonstration project and must not be used for real banking transactions.
 
-If the current implementation uses browser Local Storage, the data is stored locally in the browser and is not automatically shared across devices or users. A production banking application requires a secure backend, persistent database, proper authentication, authorization, and additional security measures.
+If the application uses browser Local Storage, the data is stored locally in the browser and is not automatically shared across devices or users.
 
-## 10. Author
+A production banking application requires a secure backend, a persistent database, proper authentication and authorization, and appropriate security controls.
 
-**Project:** MyBank - Banking Application
+## 10. Author and Repository
 
-**Purpose:** Coding Assignment 7 - Review Your README
+**Project Name:** MyBank - Banking Application
 
-**Repository:** Add your GitHub repository URL here.
+**Assignment:** Coding Assignment 7 – Review Your README
+
+**GitHub Repository:** https://github.com/Bhanumathi0502/Bank-application
+
+**README URL:** https://github.com/Bhanumathi0502/Bank-application/blob/main/README.md
